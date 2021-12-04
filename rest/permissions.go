@@ -3,7 +3,7 @@ package rest
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/RocketChat/Rocket.Chat.Go.SDK/models"
+	"github.com/Mephistophiles/Rocket.Chat.Go.SDK/models"
 )
 
 type UpdatePermissionsRequest struct {
