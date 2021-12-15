@@ -179,6 +179,18 @@ func (c *Client) UnPinMessage(message *models.Message) error {
 	return nil
 }
 
+// UnreadMessage unread message
+// takes a message object
+func (c *Client) UnreadMessage(message *models.Message) error {
+	_, err := c.ddp.Call("unreadMessages", message)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 // SubscribeToMessageStream Subscribes to the message updates of a channel
 // Returns a buffered channel
 //
